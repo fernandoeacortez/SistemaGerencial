@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>TechGym - Sistema da Academia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="telaLogin" class="tela-login">
+    <h2>Login do Sistema</h2>
+    <input type="text" id="usuario" placeholder="Usuário" required />
+    <input type="password" id="senha" placeholder="Senha" required />
+    <button onclick="verificarLogin()">Confirmar</button>
+    <p id="mensagemErro" class="erro"></p>
+  </div>
+
+  <div id="sistema" class="oculto">
+    <div class="container">
+      <nav class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+          <li><a href="#" data-guia="Início" class="menu-link">🏠 Início</a></li>
+          <li><a href="#" data-guia="Cadastro de Aluno" class="menu-link">📋 Cadastro de Aluno</a></li>
+          <li><a href="#" data-guia="Datas" class="menu-link">🗓️ Datas</a></li>
+          <li><a href="#" data-guia="Alunos" class="menu-link">👥 Alunos</a></li>
+        </ul>
+      </nav>
+
+      <main class="main-content">
+        <h1>TechGym</h1>
+        <div id="tituloGuiaSelecionada">Início</div>
+
+        <div id="estatisticas" class="cards-container">
+          <div class="card total">Total de Alunos: <span id="totalAlunos">0</span></div>
+          <div class="card planos">Planos únicos: <span id="planosUnicos">0</span></div>
+        </div>
+
+        <form id="formAluno" class="form-visivel oculto">
+          <input type="text" id="nome" placeholder="Nome" required />
+          <input type="number" id="idade" placeholder="Idade" required />
+          <input type="text" id="cpf" placeholder="CPF (11 dígitos)" maxlength="11" required />
+          <input type="text" id="telefone" placeholder="Telefone com DDD (ex: 11999999999)" pattern="\d{10,11}" required />
+          <input type="text" id="endereco" placeholder="Endereço" required />
+          <select id="plano" required>
+            <option value="" disabled selected>Selecione um plano</option>
+            <option value="Anual">Anual</option>
+            <option value="Semestral">Semestral</option>
+            <option value="Mensal">Mensal</option>
+          </select>
+          <button type="submit">Salvar</button>
+        </form>
+
+        <section id="secaoTabela" class="oculto">
+          <h2>Alunos Cadastrados</h2>
+          <table id="tabelaAlunos">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+                <th>Endereço</th>
+                <th>Plano</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </section>
+
+        <div class="grafico-container">
+          <canvas id="graficoPlanos" width="300" height="300"></canvas>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
