@@ -1,0 +1,294 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #dfe3e6;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.sidebar ul li a:hover {
+  background-color: #34495e;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+}
+
+.main-content h1 {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+#tituloGuiaSelecionada {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  padding: 15px 25px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-size: 16px;
+}
+
+.card.total { background-color: #27ae60; }
+.card.planos { background-color: #9b59b6; }
+
+#formAluno {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: start;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+#formAluno input,
+#formAluno select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 220px;
+  background-color: #fefefe;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#formAluno select:invalid {
+  color: #888;
+}
+
+#formAluno button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#formAluno button:hover {
+  background-color: #2980b9;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+table th {
+  background-color: #2c3e50;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+button.acao {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  margin: 0 2px;
+}
+
+button.acao.editar {
+  background-color: #f1c40f;
+}
+
+button.acao.editar:hover {
+  background-color: #d4ac0d;
+}
+
+button.acao.excluir {
+  background-color: #e74c3c;
+}
+
+button.acao.excluir:hover {
+  background-color: #c0392b;
+}
+
+.oculto {
+  display: none !important;
+}
+
+.tela-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #bdc3c7;
+}
+
+.tela-login input {
+  margin: 10px 0;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+}
+
+.tela-login button {
+  padding: 10px 20px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tela-login button:hover {
+  background-color: #1e8449;
+}
+
+.erro {
+  color: red;
+  margin-top: 10px;
+}
+
+/* --- Estilo para Relatórios --- */
+#secaoRelatorios {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+#loginRelatorio {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#loginRelatorio input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#loginRelatorio button {
+  padding: 10px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#loginRelatorio button:hover {
+  background-color: #27ae60;
+}
+
+.botoes-relatorios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.botoes-relatorios button {
+  background-color: #2980b9;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.botoes-relatorios button:hover {
+  background-color: #1f618d;
+}
+
+#buscaAluno {
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.resultado-relatorio {
+  margin-top: 20px;
+  background-color: #ecf0f1;
+  padding: 15px;
+  border-radius: 8px;
+  min-height: 50px;
+}
+
+
+
+
+
+
